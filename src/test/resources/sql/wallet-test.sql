@@ -1,0 +1,1 @@
+insert into wallet (id, balance) VALUES ('e51afd83-a4b5-414a-82d5-e99f1e5ac121', 1000.00)

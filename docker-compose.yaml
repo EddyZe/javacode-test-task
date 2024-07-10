@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - type: tmpfs
+        target: /dev/shm
+    environment:
+      POSTGRES_DB: javacode
+      DOCKER_USER: postgres
+      POSTGRES_PASSWORD: admin
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
