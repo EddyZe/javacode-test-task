@@ -8,7 +8,6 @@ import ru.edd.javacodetesttask.exception.WalletNotFoundException;
 import ru.edd.javacodetesttask.repository.WalletRepository;
 import ru.edd.javacodetesttask.service.WalletService;
 
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
