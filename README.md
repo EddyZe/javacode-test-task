@@ -6,14 +6,14 @@
 <img src=https://img.shields.io/badge/lombok-red></img>
 
 Приложение принимает запрос на адрес:
-````http request
+````http
 POST api/v1/wallet
 ````
 
 Принимает json: 
 
 
-````json lines
+````json5
 {
   valletId: "UUID",
   operationType: "DEPOSIT or WITHDRAW",
@@ -24,12 +24,12 @@ POST api/v1/wallet
 
 
 Также есть возможность получить баланс кошелька
-````http request
+````http
 GET api/v1/wallets/{WALLET_UUID}
 ````
 Возвращает ответ в виде json: 
 
-````json lines
+````json5
 {
     "status": "OK",
     "newBalance": "BigDecimal",
