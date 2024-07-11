@@ -10,6 +10,9 @@
 POST api/v1/wallet
 ````
 
+Принимает json: 
+
+
 ````json lines
 {
   valletId: "UUID",
