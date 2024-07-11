@@ -17,23 +17,31 @@ POST api/v1/wallet
 {
   valletId: "UUID",
   operationType: "DEPOSIT or WITHDRAW",
-  amount: "BigDecimal"
+  amount: "Decimal"
 }
 ````
 И выполняет логику изменения счета в БД.
+И возвращает ответ в виде json:
+
+````json5
+{
+    "status": "OK",
+    "newBalance": "Decimal",
+    "timestamp": "timestamp"
+}
+````
 
 
 Также есть возможность получить баланс кошелька
 ````http
 GET api/v1/wallets/{WALLET_UUID}
 ````
-Возвращает ответ в виде json: 
 
+Ответ приходи в виде json 
 ````json5
 {
-    "status": "OK",
-    "newBalance": "BigDecimal",
-    "timestamp": "timestamp"
+    "walletId": "UUID",
+    "balance": "Decimal"
 }
 ````
 
